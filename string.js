@@ -49,20 +49,51 @@ exports.containsUpper =function(str){
         }
     } catch (e) {
         console.log(e.message);
-    } 
+        return hasUpper;
+    }
 }
 
 
 exports.containsLower =function(str){
-
+    let hasLower = false;
+    try{
+        for(i=0; i<str.length; i++){
+            if(inrange(str[i], 97, 22)){
+                hasLower = true;
+                throw new PasswordMessage("has lowercase character");
+            }
+        }
+        if(hasLower == false){
+            throw new PasswordMessage("does not have lowercase character");
+        }
+    } catch (e) {
+        console.log(e.message);
+        return hasLower;
+    }
 }
 
 
 exports.containsNumerical =function(str){
-
+    let hasNumber = false;
+    try{
+        for(i=0; i<str.length; i++){
+            if(inrange(str[i], 48, 57)){
+                hasNumber = true;
+                throw new PasswordMessage("has numerical character");
+            }
+        }
+        if(hasNumber = false){
+            throw new PasswordMessage("doesn't have numerical character");
+        }
+    } catch (e) {
+        console.log(e.message);
+        return hasNumber;
+    }
 }
 
 
 exports.containsSpecial =function(str){
+    let hasSpecial = false;
+    special = [33, 64, 35, 36, 37, 94, 38, 42];
 
 }
