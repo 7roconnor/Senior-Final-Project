@@ -15,16 +15,16 @@ function getString(){
         if(testString.checkLength(str) == false){
             passesAllChecks = false;
         }
-        if(testString.containsUpper == false){
+        if(testString.containsUpper(str) == false){
             passesAllChecks = false;
         }
-        if(testString.containsLower == false){
+        if(testString.containsLower(str) == false){
             passesAllChecks = false;
         }
-        if(testString.containsNumerical == false){
+        if(testString.containsNumerical(str) == false){
             passesAllChecks = false;
         }
-        if(testString.containsSpecial == false){
+        if(testString.containsSpecial(str) == false){
             passesAllChecks = false;
         }
 
